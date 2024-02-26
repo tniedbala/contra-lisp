@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=69.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "contra-lisp"
+description = "Python MAL implementation."
+dynamic = ["version"]
+readme = "README.md"
+license = {text = "MIT License"}
+requires-python = ">=3.10"
+dependencies = [
+    
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest~=8.0.0",
+]
+
+[tool.setuptools.dynamic]
+version = {file = ".version"}
+
+[tool.setuptools.package-dir]
+lisp = "contra_lisp"
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests"]
